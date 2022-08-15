@@ -1,5 +1,6 @@
 package com.devhong.jenkins.devhong.vo;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class MainVo {
     private String userId;
     private String context;
     @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
     private Date regDate;
 
     public UUID getId() {
